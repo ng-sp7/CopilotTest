@@ -1,0 +1,47 @@
+<h1>Decimal Wheel Picker — Demo</h1>
+<div class="demo">
+  <div class="card">
+    <h3>min=5.5 max=50.8 stepSize=0.5</h3>
+    <decimal-wheel-picker
+      [min]="cfg1.min"
+      [max]="cfg1.max"
+      [decimals]="cfg1.decimals"
+      [stepSize]="cfg1.stepSize"
+      [allowNegative]="cfg1.allowNegative"
+      [itemHeight]="cfg1.itemHeight"
+      [wheelHeight]="cfg1.wheelHeight"
+      [(value)]="val1">
+    </decimal-wheel-picker>
+    <div class="value">Selected: {{ val1 }}</div>
+  </div>
+
+  <div class="card">
+    <h3>min=-100 max=100 stepSize=5</h3>
+    <decimal-wheel-picker
+      [min]="cfg2.min"
+      [max]="cfg2.max"
+      [decimals]="cfg2.decimals"
+      [stepSize]="cfg2.stepSize"
+      [allowNegative]="cfg2.allowNegative"
+      [itemHeight]="cfg2.itemHeight"
+      [wheelHeight]="cfg2.wheelHeight"
+      [(value)]="val2">
+    </decimal-wheel-picker>
+    <div class="value">Selected: {{ val2 }}</div>
+  </div>
+
+  <div class="card">
+    <h3>allowNegative=false (0..10) step=0.25 decimals=2</h3>
+    <decimal-wheel-picker
+      [min]="cfg3.min"
+      [max]="cfg3.max"
+      [decimals]="cfg3.decimals"
+      [stepSize]="cfg3.stepSize"
+      [allowNegative]="cfg3.allowNegative"
+      [itemHeight]="cfg3.itemHeight"
+      [wheelHeight]="cfg3.wheelHeight"
+      [(value)]="val3">
+    </decimal-wheel-picker>
+    <div class="value">Selected: {{ val3 }}</div>
+  </div>
+</div>

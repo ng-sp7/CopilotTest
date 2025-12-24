@@ -1,0 +1,29 @@
+<div class="dwp-root">
+  <div class="dwp-wheels" [style.height.px]="wheelHeight">
+    <div *ngIf="signOptions.length > 1" class="dwp-wheel" #signWheel [style.height.px]="wheelHeight">
+      <ul class="dwp-list" [style.rowGap.px]="0">
+        <li *ngFor="let s of signOptions" class="dwp-item" [class.selected]="s===selectedSign" [style.height.px]="itemHeight">
+          <div class="dwp-item-inner">{{ s }}</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="dwp-wheel" #intWheel [style.height.px]="wheelHeight">
+      <ul class="dwp-list">
+        <li *ngFor="let i of integers" class="dwp-item" [class.selected]="i===selectedInteger" [style.height.px]="itemHeight">
+          <div class="dwp-item-inner">{{ i }}</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="dwp-wheel" #decWheel [style.height.px]="wheelHeight">
+      <ul class="dwp-list">
+        <li *ngFor="let d of decimalsList" class="dwp-item" [class.selected]="d===selectedDecimal" [style.height.px]="itemHeight">
+          <div class="dwp-item-inner">.{{ formatDecimalPart(d) }}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dwp-indicator" [style.top.px]="(wheelHeight - itemHeight) / 2" [style.height.px]="itemHeight"></div>
+</div>
