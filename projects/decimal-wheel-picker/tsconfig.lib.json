@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDecoratorMetadata": true
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true
+  },
+  "include": ["src/**/*.ts"]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "copilot-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build:lib": "ng build decimal-wheel-picker",
+    "build:demo": "ng build decimal-wheel-picker-demo",
+    "build": "npm run build:lib && npm run build:demo",
+    "start": "ng serve decimal-wheel-picker-demo --open"
+  },
+  "devDependencies": {
+    "@angular/cli": "^16.0.0",
+    "@angular/compiler-cli": "^16.0.0",
+    "@angular-devkit/build-ng-packagr": "^0.1100.0",
+    "ng-packagr": "^15.0.0"
+  },
+  "dependencies": {
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
+  }
+}
